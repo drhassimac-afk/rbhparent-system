@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم rbhparent - الآباء</title>
+    <!-- استدعاء خريطة OpenStreetMap ومكتبة الاتصال اللحظي الفوري -->
+    <link rel="stylesheet" href="https://unpkg.com" />
+    <script src="https://unpkg.com"></script>
+    <script src="https://socket.io"></script>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; background: #f1f5f9; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; padding: 25px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
+        h1 { color: #0f172a; text-align: center; margin-bottom: 25px; font-size: 24px; }
+        .control-panel { display: flex; gap: 15px; justify-content: center; margin-bottom: 25px; }
+        button { border: none; padding: 14px 30px; font-size: 16px; font-weight: bold; border-radius: 10px; cursor: pointer; transition: all 0.2s ease-in-out; }
+        .btn-lock { background: #ef4444; color: white; box-shadow: 0 4px 6px rgba(239, 68, 68, 0.2); }
+        .btn-lock:hover { background: #dc2626; transform: scale(1.02); }
+        .btn-unlock { background: #10b981; color: white; box-shadow: 0 4px 6px rgba(16, 185, 129, 0.2); }
+        .btn-unlock:hover { background: #059669; transform: scale(1.02); }
+        #map { height: 450px; width: 100%; border-radius: 12px; border: 1px solid #e2e8f0; }
+        .status-box { text-align: center; font-size: 15px; color: #475569; margin-top: 15px; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>لوحة تحكم الآباء الفورية - rbhparent 🛡️</h1>
+        
+        <!-- أزرار التحكم اللحظي بقفل هاتف الطفل -->
+        <div class="control-panel">
+            <button class="btn-lock" onclick="sendLockCommand(true)">🔒 قفل هاتف الطفل الآن</button>
+            <button class="btn-unlock" onclick="sendLockCommand(false)">🔓 إلغاء حظر الجهاز</button>
+        </div>
+
+        <!-- شاشة عرض خريطة التتبع الحية للـ GPS -->
+        <div id="map"></div>
+        <div class="status-box" id="status">جاري الاتصال بالسيرفر وتحديث خريطة الموقع...</div>
+    </div>
+
+    <script>
+        const familyId = "family_7rbh_zone"; // معرف الغرفة العائلية المشترك
+        
+        // الاتصال بسيرفر rbhparent المركزي (المنفذ 3000)
+        const socket = io("https://onrender.com"); 
+
+        // تهيئة وإعداد الخريطة الجغرافية الافتراضية
+        let map = L.map('map').setView([36.6500, 3.2500], 13);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{s}/{n}/{x}/{y}.png').addTo(map);
+        let childMarker = L.marker([36.6500, 3.2500]).addTo(map).bindPopup('موقع الطفل الحالي').openPopup();
+
+        socket.on("connect", () => {
+            document.getElementById("status").innerText = "🔒 متصل بنجاح بالسيرفر وقاعدة البيانات اللحظية.";
+            // تسجيل هوية الأب في الغرفة المخصصة
+            socket.emit("join_room", { familyId: familyId, role: "parent" });
+        });
+
+        // الاستماع للبث الحي القادم من هاتف الطفل وتحديث موقعه على الخريطة تلقائياً
+        socket.on("receive_location", (data) => {
+            const { latitude, longitude, time } = data;
+            const newPos = [latitude, longitude];
+            
+            childMarker.setLatLng(newPos);
+            map.panTo(newPos); // تحريك الخريطة تلقائياً لتقف على موقع الطفل الجديد
+            document.getElementById("status").innerText = `📍 تم تحديث موقع طفلك الجغرافي في تمام الساعة: ${time}`;
+        });
+
+        // دالة إرسال أمر القفل أو الفك فوراً عند ضغط الأب على الأزرار
+        function sendLockCommand(isLock) {
+            socket.emit("lock_device", { familyId: familyId, lock: isLock });
+            document.getElementById("status").innerText = isLock ? "🔒 تم إرسال أمر حظر الهاتف وقفل الشاشة للطفل." : "🔓 تم إرسال أمر إلغاء الحظر وتفعيل الجهاز.";
+        }
+
+        socket.on("disconnect", () => {
+            document.getElementById("status").innerText = "❌ انقطع الاتصال بالسيرفر المركزي.";
+        });
+    </script>
+</body>
+</html>
