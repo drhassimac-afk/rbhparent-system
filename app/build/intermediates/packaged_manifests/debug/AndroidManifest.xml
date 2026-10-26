@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rbh.parental.debug"
+    android:versionCode="3"
+    android:versionName="3.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="26"
+        android:targetSdkVersion="34" />
+
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 📷 الكاميرا -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <!-- 🎤 الميكروفون -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 💾 التخزين -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <permission
+        android:name="com.rbh.parental.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.rbh.parental.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@drawable/ic_shield"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RBHParent" >
+
+        <!-- شاشة الترحيب -->
+        <activity
+            android:name="com.rbh.parental.activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.RBHParent.Splash" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.rbh.parental.activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.PermissionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.BlockAppsActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.ScreenTimeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.ScheduleActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.CallsLogActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.EmergencyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.PinLockActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.UsageChartActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.WiFiConnectActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.rbh.parental.activities.SleepScheduleActivity"
+            android:exported="false" />
+
+        <!-- 📷 شاشة الكاميرا -->
+        <activity
+            android:name="com.rbh.parental.activities.CameraActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 🎤 شاشة الميكروفون -->
+        <activity
+            android:name="com.rbh.parental.activities.MicrophoneActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 📂 معرض الملفات -->
+        <activity
+            android:name="com.rbh.parental.activities.GalleryActivity"
+            android:exported="false" />
+
+        <!-- خدمة الحظر -->
+        <service
+            android:name="com.rbh.parental.services.AppBlockerService"
+            android:exported="false" />
+        <service
+            android:name="com.rbh.parental.services.LocationService"
+            android:exported="false" />
+
+        <!-- 📷 خدمة الكاميرا الخلفية -->
+        <service
+            android:name="com.rbh.parental.services.CameraCaptureService"
+            android:exported="false"
+            android:foregroundServiceType="camera" />
+
+        <!-- 🎤 خدمة التسجيل الصوتي -->
+        <service
+            android:name="com.rbh.parental.services.AudioRecordService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+
+        <!-- خدمة الوصول -->
+        <service
+            android:name="com.rbh.parental.services.RBHAccessibilityService"
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- مستمع الإشعارات -->
+        <service
+            android:name="com.rbh.parental.services.RBHNotificationListener"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name="com.rbh.parental.services.BootReceiver"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.rbh.parental.services.SleepReceiver"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.rbh.parental.debug.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.rbh.parental.debug.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

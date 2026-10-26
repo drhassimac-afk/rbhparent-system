@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.RBHParent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">#2D6AE8</item>
+        <item name="colorPrimaryDark">#1A4BB8</item>
+        <item name="colorAccent">#00C853</item>
+    </style>
+</resources>

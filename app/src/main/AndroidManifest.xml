@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- 📷 الكاميرا -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+    <!-- 🎤 الميكروفون -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
+    <!-- 💾 التخزين -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_shield"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RBHParent"
+        android:largeHeap="true">
+
+        <!-- شاشة الترحيب -->
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.RBHParent.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.MainActivity" android:exported="false" />
+        <activity android:name=".activities.PermissionActivity" android:exported="false" />
+        <activity android:name=".activities.BlockAppsActivity" android:exported="false" />
+        <activity android:name=".activities.ScreenTimeActivity" android:exported="false" />
+        <activity android:name=".activities.ScheduleActivity" android:exported="false" />
+        <activity android:name=".activities.CallsLogActivity" android:exported="false" />
+        <activity android:name=".activities.EmergencyActivity" android:exported="false" />
+        <activity android:name=".activities.PinLockActivity" android:exported="false" />
+        <activity android:name=".activities.UsageChartActivity" android:exported="false" />
+        <activity android:name=".activities.WiFiConnectActivity" android:exported="false" />
+        <activity android:name=".activities.SleepScheduleActivity" android:exported="false" />
+
+        <!-- 📷 شاشة الكاميرا -->
+        <activity
+            android:name=".activities.CameraActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 🎤 شاشة الميكروفون -->
+        <activity
+            android:name=".activities.MicrophoneActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <!-- 📂 معرض الملفات -->
+        <activity
+            android:name=".activities.GalleryActivity"
+            android:exported="false" />
+
+        <!-- خدمة الحظر -->
+        <service android:name=".services.AppBlockerService" android:exported="false" />
+        <service android:name=".services.LocationService" android:exported="false" />
+
+        <!-- 📷 خدمة الكاميرا الخلفية -->
+        <service
+            android:name=".services.CameraCaptureService"
+            android:exported="false"
+            android:foregroundServiceType="camera" />
+
+        <!-- 🎤 خدمة التسجيل الصوتي -->
+        <service
+            android:name=".services.AudioRecordService"
+            android:exported="false"
+            android:foregroundServiceType="microphone" />
+
+        <!-- خدمة الوصول -->
+        <service
+            android:name=".services.RBHAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+
+        <!-- مستمع الإشعارات -->
+        <service
+            android:name=".services.RBHNotificationListener"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name=".services.BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".services.SleepReceiver" android:exported="false" />
+
+            <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>

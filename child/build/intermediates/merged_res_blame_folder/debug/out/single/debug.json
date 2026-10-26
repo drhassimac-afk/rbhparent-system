@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.rbh.child-merged_res-31:/xml_accessibility_service_config.xml.flat",
+        "source": "com.rbh.child-main-33:/xml/accessibility_service_config.xml"
+    },
+    {
+        "merged": "com.rbh.child-merged_res-31:/layout_activity_child_main.xml.flat",
+        "source": "com.rbh.child-main-33:/layout/activity_child_main.xml"
+    },
+    {
+        "merged": "com.rbh.child-merged_res-31:/drawable_ic_shield.xml.flat",
+        "source": "com.rbh.child-main-33:/drawable/ic_shield.xml"
+    }
+]

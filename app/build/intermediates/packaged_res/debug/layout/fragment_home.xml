@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- الترويسة -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="RBH Parent"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_primary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تحكم كامل بأبنائك 🛡️"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@drawable/ic_shield" />
+        </LinearLayout>
+
+        <!-- بطاقة الوقت -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:background="@drawable/bg_primary_gradient">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="إجمالي وقت الشاشة"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvTotalTime"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="0h 00m"
+                        android:textColor="@color/text_white"
+                        android:textSize="36sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.progressindicator.CircularProgressIndicator
+                        android:id="@+id/progressUsage"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        app:indicatorColor="#00C853"
+                        app:trackColor="#33FFFFFF"
+                        app:indicatorSize="60dp"
+                        app:trackThickness="6dp"
+                        android:max="100"
+                        android:progress="65" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvUsagePercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="65% من الحد اليومي"
+                    android:textColor="#B3FFFFFF"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 3 بطاقات إحصائية -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBlockedApps"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="4dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:gravity="center"
+                    android:background="#FFF3E0">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
+                        android:src="@drawable/ic_block" />
+                    <TextView android:id="@+id/tvBlockedCount"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="22sp" android:textStyle="bold"
+                        android:textColor="@color/danger" android:layout_marginTop="6dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="محظور" android:textSize="11sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardNotifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:gravity="center"
+                    android:background="#FFF8E1">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
+                        android:src="@drawable/ic_time" />
+                    <TextView android:id="@+id/tvNotifCount"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textSize="22sp" android:textStyle="bold"
+                        android:textColor="@color/warning" android:layout_marginTop="6dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="إشعارات" android:textSize="11sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="4dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:gravity="center"
+                    android:background="#E0F7FA">
+                    <ImageView android:layout_width="28dp" android:layout_height="28dp"
+                        android:src="@drawable/ic_location" />
+                    <TextView android:id="@+id/tvLocationStatus"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="ON" android:textSize="22sp" android:textStyle="bold"
+                        android:textColor="@color/success" android:layout_marginTop="6dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="الموقع" android:textSize="11sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- الأدوات السريعة -->
+        <TextView style="@style/SectionTitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="📷🎤 الكاميرا والميكروفون" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTools"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- أكثر التطبيقات -->
+        <TextView style="@style/SectionTitle"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="أكثر التطبيقات استخداماً" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="14dp" app:cardElevation="4dp"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:padding="12dp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvTopApps"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- زر طوارئ -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardEmergency"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:cardCornerRadius="14dp" app:cardElevation="4dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true" android:focusable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:padding="14dp"
+                android:gravity="center_vertical"
+                android:background="#FFEBEE">
+                <ImageView android:layout_width="36dp" android:layout_height="36dp"
+                    android:src="@drawable/ic_emergency" />
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content"
+                    android:layout_weight="1" android:orientation="vertical"
+                    android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="طوارئ SOS" android:textSize="15sp"
+                        android:textStyle="bold" android:textColor="@color/danger" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="اضغط الآن!" android:textSize="12sp"
+                        android:textColor="@color/text_secondary" />
+                </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="SOS" android:backgroundTint="@color/danger"
+                    android:textColor="@color/text_white" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

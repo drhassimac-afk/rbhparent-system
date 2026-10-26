@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <external-files-path
+        name="rbh_photos"
+        path="RBH_Photos/" />
+    <external-files-path
+        name="rbh_audio"
+        path="RBH_Audio/" />
+</paths>

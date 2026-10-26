@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quality_options">
+        <item>جودة عالية (16kHz)</item>
+        <item>جودة متوسطة (8kHz)</item>
+        <item>جودة منخفضة (4kHz)</item>
+    </string-array>
+
+    <string-array name="day_options">
+        <item>السبت</item>
+        <item>الأحد</item>
+        <item>الاثنين</item>
+        <item>الثلاثاء</item>
+        <item>الأربعاء</item>
+        <item>الخميس</item>
+        <item>الجمعة</item>
+    </string-array>
+</resources>

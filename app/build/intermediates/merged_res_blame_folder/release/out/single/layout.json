@@ -1,0 +1,86 @@
+[
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_wifi_connect.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_wifi_connect.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_gallery.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_gallery.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_sleep_schedule.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_sleep_schedule.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/fragment_apps.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/fragment_apps.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_camera.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_camera.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/item_notification.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/item_notification.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/item_tool.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/item_tool.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/fragment_settings.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/fragment_settings.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_microphone.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_microphone.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_usage_chart.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_usage_chart.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/fragment_location.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/fragment_location.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_main.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/fragment_home.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/item_top_app.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/item_top_app.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_splash.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_pin_lock.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_pin_lock.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/item_usage_bar.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/item_usage_bar.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/item_app.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/item_app.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/item_photo.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/item_photo.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/activity_block_apps.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/activity_block_apps.xml"
+    },
+    {
+        "merged": "com.rbh.parental.app-mergeReleaseResources-37:/layout/item_recording.xml",
+        "source": "com.rbh.parental.app-main-40:/layout/item_recording.xml"
+    }
+]

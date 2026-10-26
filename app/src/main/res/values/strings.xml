@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RBH Parent</string>
+    <string name="app_tagline">تحكم كامل بأبنائك</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_apps">التطبيقات</string>
+    <string name="nav_location">الموقع</string>
+    <string name="nav_settings">الإعدادات</string>
+
+    <string name="total_screen_time">إجمالي وقت الشاشة</string>
+    <string name="apps_blocked">تطبيقات محظورة</string>
+    <string name="notifications_today">إشعارات اليوم</string>
+    <string name="location_status">حالة الموقع</string>
+    <string name="block_apps">حظر التطبيقات</string>
+    <string name="screen_time_control">التحكم بالوقت</string>
+    <string name="schedule">الجدولة</string>
+    <string name="emergency_sos">طوارئ SOS</string>
+    <string name="calls_log">سجل المكالمات</string>
+
+    <string name="apps_title">التطبيقات</string>
+    <string name="search_apps">ابحث عن تطبيق…</string>
+    <string name="permission_granted">تم منح الإذن ✓</string>
+    <string name="permission_denied">مُرفوض ✗</string>
+    <string name="location_title">تتبع الموقع</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="emergency_title">زر الطوارئ</string>
+    <string name="calls_title">سجل المكالمات</string>
+    <string name="screen_time_title">التحكم بوقت الشاشة</string>
+</resources>

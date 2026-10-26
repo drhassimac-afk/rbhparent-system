@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="day_options">
+        <item>السبت</item>
+        <item>الأحد</item>
+        <item>الاثنين</item>
+        <item>الثلاثاء</item>
+        <item>الأربعاء</item>
+        <item>الخميس</item>
+        <item>الجمعة</item>
+    </string-array>
+    <string-array name="quality_options">
+        <item>جودة عالية (16kHz)</item>
+        <item>جودة متوسطة (8kHz)</item>
+        <item>جودة منخفضة (4kHz)</item>
+    </string-array>
+    <color name="accent">#FF00C853</color>
+    <color name="background">#FFF5F7FA</color>
+    <color name="background_card">#FFFFFFFF</color>
+    <color name="danger">#FFE53935</color>
+    <color name="nav_active">#FF2D6AE8</color>
+    <color name="nav_inactive">#FF9CA3AF</color>
+    <color name="primary">#FF2D6AE8</color>
+    <color name="primary_dark">#FF1A4BB8</color>
+    <color name="primary_light">#FF7BA1F7</color>
+    <color name="success">#FF43A047</color>
+    <color name="text_hint">#FF9CA3AF</color>
+    <color name="text_primary">#FF1A1A2E</color>
+    <color name="text_secondary">#FF6B7280</color>
+    <color name="text_white">#FFFFFFFF</color>
+    <color name="warning">#FFFFA726</color>
+    <string name="app_name">RBH Parent</string>
+    <string name="app_tagline">تحكم كامل بأبنائك</string>
+    <string name="apps_blocked">تطبيقات محظورة</string>
+    <string name="apps_title">التطبيقات</string>
+    <string name="block_apps">حظر التطبيقات</string>
+    <string name="calls_log">سجل المكالمات</string>
+    <string name="calls_title">سجل المكالمات</string>
+    <string name="emergency_sos">طوارئ SOS</string>
+    <string name="emergency_title">زر الطوارئ</string>
+    <string name="location_status">حالة الموقع</string>
+    <string name="location_title">تتبع الموقع</string>
+    <string name="nav_apps">التطبيقات</string>
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_location">الموقع</string>
+    <string name="nav_settings">الإعدادات</string>
+    <string name="notifications_today">إشعارات اليوم</string>
+    <string name="permission_denied">مُرفوض ✗</string>
+    <string name="permission_granted">تم منح الإذن ✓</string>
+    <string name="schedule">الجدولة</string>
+    <string name="screen_time_control">التحكم بالوقت</string>
+    <string name="screen_time_title">التحكم بوقت الشاشة</string>
+    <string name="search_apps">ابحث عن تطبيق…</string>
+    <string name="settings_title">الإعدادات</string>
+    <string name="total_screen_time">إجمالي وقت الشاشة</string>
+    <style name="SectionTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    <style name="Theme.RBHParent" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primary</item>
+    </style>
+    <style name="Theme.RBHParent.Splash" parent="Theme.RBHParent">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+</resources>

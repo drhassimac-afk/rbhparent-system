@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#2D6AE8"
+    android:padding="32dp">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_shield" />
+
+    <TextView
+        android:id="@+id/tvPinTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="أدخل كلمة المرور"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp" />
+
+    <!-- نقاط كلمة المرور -->
+    <LinearLayout
+        android:id="@+id/pinDots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/tvPinError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FF6666"
+        android:textSize="14sp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" />
+
+    <!-- لوحة الأرقام -->
+    <GridLayout
+        android:id="@+id/keypad"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:useDefaultMargins="true"
+        android:alignmentMode="alignBounds" />
+
+    <TextView
+        android:id="@+id/tvForgotPin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="نسيت كلمة المرور؟"
+        android:textColor="#B3FFFFFF"
+        android:textSize="14sp"
+        android:layout_marginTop="24dp"
+        android:clickable="true" />
+</LinearLayout>

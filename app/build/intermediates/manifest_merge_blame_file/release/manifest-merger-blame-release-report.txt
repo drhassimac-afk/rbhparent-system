@@ -1,0 +1,419 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.rbh.parental"
+4    android:versionCode="3"
+5    android:versionName="3.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+11-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:5:5-6:47
+11-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:5:22-75
+12    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+12-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:7:5-72
+12-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:7:22-69
+13    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+13-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:8:5-75
+13-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:8:22-72
+14    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+14-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:9:5-79
+14-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:9:22-76
+15    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+15-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:10:5-81
+15-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:10:22-78
+16    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+16-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:11:5-85
+16-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:11:22-82
+17    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+17-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:12:5-78
+17-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:12:22-75
+18    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+18-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:13:5-77
+18-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:13:22-74
+19    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+19-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:14:5-86
+19-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:14:22-83
+20    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+20-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:15:5-81
+20-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:15:22-78
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:16:5-68
+21-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:16:22-65
+22    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+22-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:17:5-77
+22-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:17:22-74
+23    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+23-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:18:5-77
+23-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:18:22-74
+24    <uses-permission android:name="android.permission.VIBRATE" />
+24-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:19:5-66
+24-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:19:22-63
+25    <uses-permission android:name="android.permission.INTERNET" />
+25-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:20:5-67
+25-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:20:22-64
+26
+27    <!-- 📷 الكاميرا -->
+28    <uses-permission android:name="android.permission.CAMERA" />
+28-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:23:5-65
+28-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:23:22-62
+29
+30    <uses-feature
+30-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:24:5-85
+31        android:name="android.hardware.camera"
+31-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:24:19-57
+32        android:required="false" />
+32-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:24:58-82
+33    <uses-feature
+33-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:25:5-95
+34        android:name="android.hardware.camera.autofocus"
+34-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:25:19-67
+35        android:required="false" />
+35-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:25:68-92
+36
+37    <!-- 🎤 الميكروفون -->
+38    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+38-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:28:5-71
+38-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:28:22-68
+39    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+39-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:29:5-80
+39-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:29:22-77
+40
+41    <!-- 💾 التخزين -->
+42    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+42-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:32:5-76
+42-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:32:22-73
+43    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+43-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:33:5-75
+43-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:33:22-72
+44    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+44-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:34:5-35:40
+44-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:34:22-78
+45    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+45-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:36:5-37:40
+45-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:36:22-77
+46
+47    <permission
+47-->[androidx.core:core:1.12.0] /home/userzakiayoube/.gradle/caches/transforms-3/440a64c1659b3784956be1ef27019da1/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+48        android:name="com.rbh.parental.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+48-->[androidx.core:core:1.12.0] /home/userzakiayoube/.gradle/caches/transforms-3/440a64c1659b3784956be1ef27019da1/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+49        android:protectionLevel="signature" />
+49-->[androidx.core:core:1.12.0] /home/userzakiayoube/.gradle/caches/transforms-3/440a64c1659b3784956be1ef27019da1/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+50
+51    <uses-permission android:name="com.rbh.parental.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+51-->[androidx.core:core:1.12.0] /home/userzakiayoube/.gradle/caches/transforms-3/440a64c1659b3784956be1ef27019da1/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+51-->[androidx.core:core:1.12.0] /home/userzakiayoube/.gradle/caches/transforms-3/440a64c1659b3784956be1ef27019da1/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+52
+53    <application
+53-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:39:5-144:19
+54        android:allowBackup="true"
+54-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:40:9-35
+55        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+55-->[androidx.core:core:1.12.0] /home/userzakiayoube/.gradle/caches/transforms-3/440a64c1659b3784956be1ef27019da1/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+56        android:extractNativeLibs="false"
+57        android:icon="@drawable/ic_shield"
+57-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:41:9-43
+58        android:label="@string/app_name"
+58-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:42:9-41
+59        android:largeHeap="true"
+59-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:45:9-33
+60        android:supportsRtl="true"
+60-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:43:9-35
+61        android:theme="@style/Theme.RBHParent" >
+61-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:44:9-47
+62
+63        <!-- شاشة الترحيب -->
+64        <activity
+64-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:48:9-56:20
+65            android:name="com.rbh.parental.activities.SplashActivity"
+65-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:49:13-54
+66            android:exported="true"
+66-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:50:13-36
+67            android:theme="@style/Theme.RBHParent.Splash" >
+67-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:51:13-58
+68            <intent-filter>
+68-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:52:13-55:29
+69                <action android:name="android.intent.action.MAIN" />
+69-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:53:17-69
+69-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:53:25-66
+70
+71                <category android:name="android.intent.category.LAUNCHER" />
+71-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:54:17-77
+71-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:54:27-74
+72            </intent-filter>
+73        </activity>
+74        <activity
+74-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:58:9-86
+75            android:name="com.rbh.parental.activities.MainActivity"
+75-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:58:19-58
+76            android:exported="false" />
+76-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:58:59-83
+77        <activity
+77-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:59:9-92
+78            android:name="com.rbh.parental.activities.PermissionActivity"
+78-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:59:19-64
+79            android:exported="false" />
+79-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:59:65-89
+80        <activity
+80-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:60:9-91
+81            android:name="com.rbh.parental.activities.BlockAppsActivity"
+81-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:60:19-63
+82            android:exported="false" />
+82-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:60:64-88
+83        <activity
+83-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:61:9-92
+84            android:name="com.rbh.parental.activities.ScreenTimeActivity"
+84-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:61:19-64
+85            android:exported="false" />
+85-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:61:65-89
+86        <activity
+86-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:62:9-90
+87            android:name="com.rbh.parental.activities.ScheduleActivity"
+87-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:62:19-62
+88            android:exported="false" />
+88-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:62:63-87
+89        <activity
+89-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:63:9-90
+90            android:name="com.rbh.parental.activities.CallsLogActivity"
+90-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:63:19-62
+91            android:exported="false" />
+91-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:63:63-87
+92        <activity
+92-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:64:9-91
+93            android:name="com.rbh.parental.activities.EmergencyActivity"
+93-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:64:19-63
+94            android:exported="false" />
+94-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:64:64-88
+95        <activity
+95-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:65:9-89
+96            android:name="com.rbh.parental.activities.PinLockActivity"
+96-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:65:19-61
+97            android:exported="false" />
+97-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:65:62-86
+98        <activity
+98-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:66:9-92
+99            android:name="com.rbh.parental.activities.UsageChartActivity"
+99-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:66:19-64
+100            android:exported="false" />
+100-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:66:65-89
+101        <activity
+101-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:67:9-93
+102            android:name="com.rbh.parental.activities.WiFiConnectActivity"
+102-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:67:19-65
+103            android:exported="false" />
+103-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:67:66-90
+104        <activity
+104-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:68:9-95
+105            android:name="com.rbh.parental.activities.SleepScheduleActivity"
+105-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:68:19-67
+106            android:exported="false" />
+106-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:68:68-92
+107
+108        <!-- 📷 شاشة الكاميرا -->
+109        <activity
+109-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:71:9-74:52
+110            android:name="com.rbh.parental.activities.CameraActivity"
+110-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:72:13-54
+111            android:exported="false"
+111-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:73:13-37
+112            android:screenOrientation="portrait" />
+112-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:74:13-49
+113
+114        <!-- 🎤 شاشة الميكروفون -->
+115        <activity
+115-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:77:9-80:52
+116            android:name="com.rbh.parental.activities.MicrophoneActivity"
+116-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:78:13-58
+117            android:exported="false"
+117-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:79:13-37
+118            android:screenOrientation="portrait" />
+118-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:80:13-49
+119
+120        <!-- 📂 معرض الملفات -->
+121        <activity
+121-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:83:9-85:40
+122            android:name="com.rbh.parental.activities.GalleryActivity"
+122-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:84:13-55
+123            android:exported="false" />
+123-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:85:13-37
+124
+125        <!-- خدمة الحظر -->
+126        <service
+126-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:88:9-88
+127            android:name="com.rbh.parental.services.AppBlockerService"
+127-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:88:18-60
+128            android:exported="false" />
+128-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:88:61-85
+129        <service
+129-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:89:9-86
+130            android:name="com.rbh.parental.services.LocationService"
+130-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:89:18-58
+131            android:exported="false" />
+131-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:89:59-83
+132
+133        <!-- 📷 خدمة الكاميرا الخلفية -->
+134        <service
+134-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:92:9-95:54
+135            android:name="com.rbh.parental.services.CameraCaptureService"
+135-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:93:13-58
+136            android:exported="false"
+136-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:94:13-37
+137            android:foregroundServiceType="camera" />
+137-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:95:13-51
+138
+139        <!-- 🎤 خدمة التسجيل الصوتي -->
+140        <service
+140-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:98:9-101:58
+141            android:name="com.rbh.parental.services.AudioRecordService"
+141-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:99:13-56
+142            android:exported="false"
+142-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:100:13-37
+143            android:foregroundServiceType="microphone" />
+143-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:101:13-55
+144
+145        <!-- خدمة الوصول -->
+146        <service
+146-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:104:9-114:19
+147            android:name="com.rbh.parental.services.RBHAccessibilityService"
+147-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:105:13-61
+148            android:exported="true"
+148-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:107:13-36
+149            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+149-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:106:13-79
+150            <intent-filter>
+150-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:108:13-110:29
+151                <action android:name="android.accessibilityservice.AccessibilityService" />
+151-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:109:17-92
+151-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:109:25-89
+152            </intent-filter>
+153
+154            <meta-data
+154-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:111:13-113:72
+155                android:name="android.accessibilityservice"
+155-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:112:17-60
+156                android:resource="@xml/accessibility_service_config" />
+156-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:113:17-69
+157        </service>
+158
+159        <!-- مستمع الإشعارات -->
+160        <service
+160-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:117:9-124:19
+161            android:name="com.rbh.parental.services.RBHNotificationListener"
+161-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:118:13-61
+162            android:exported="true"
+162-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:120:13-36
+163            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+163-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:119:13-87
+164            <intent-filter>
+164-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:121:13-123:29
+165                <action android:name="android.service.notification.NotificationListenerService" />
+165-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:122:17-99
+165-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:122:25-96
+166            </intent-filter>
+167        </service>
+168
+169        <receiver
+169-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:126:9-130:20
+170            android:name="com.rbh.parental.services.BootReceiver"
+170-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:126:19-56
+171            android:exported="true" >
+171-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:126:57-80
+172            <intent-filter>
+172-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:127:13-129:29
+173                <action android:name="android.intent.action.BOOT_COMPLETED" />
+173-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:128:17-79
+173-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:128:25-76
+174            </intent-filter>
+175        </receiver>
+176        <receiver
+176-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:132:9-85
+177            android:name="com.rbh.parental.services.SleepReceiver"
+177-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:132:19-57
+178            android:exported="false" />
+178-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:132:58-82
+179
+180        <provider
+181            android:name="androidx.core.content.FileProvider"
+181-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:135:13-62
+182            android:authorities="com.rbh.parental.provider"
+182-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:136:13-60
+183            android:exported="false"
+183-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:137:13-37
+184            android:grantUriPermissions="true" >
+184-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:138:13-47
+185            <meta-data
+185-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:139:13-141:54
+186                android:name="android.support.FILE_PROVIDER_PATHS"
+186-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:140:17-67
+187                android:resource="@xml/file_paths" />
+187-->/home/userzakiayoube/rbhparent/app/src/main/AndroidManifest.xml:141:17-51
+188        </provider>
+189        <provider
+189-->[androidx.emoji2:emoji2:1.2.0] /home/userzakiayoube/.gradle/caches/transforms-3/40af677edc9e981bf1ec9bb11c8b1d32/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+190            android:name="androidx.startup.InitializationProvider"
+190-->[androidx.emoji2:emoji2:1.2.0] /home/userzakiayoube/.gradle/caches/transforms-3/40af677edc9e981bf1ec9bb11c8b1d32/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+191            android:authorities="com.rbh.parental.androidx-startup"
+191-->[androidx.emoji2:emoji2:1.2.0] /home/userzakiayoube/.gradle/caches/transforms-3/40af677edc9e981bf1ec9bb11c8b1d32/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+192            android:exported="false" >
+192-->[androidx.emoji2:emoji2:1.2.0] /home/userzakiayoube/.gradle/caches/transforms-3/40af677edc9e981bf1ec9bb11c8b1d32/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+193            <meta-data
+193-->[androidx.emoji2:emoji2:1.2.0] /home/userzakiayoube/.gradle/caches/transforms-3/40af677edc9e981bf1ec9bb11c8b1d32/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+194                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+194-->[androidx.emoji2:emoji2:1.2.0] /home/userzakiayoube/.gradle/caches/transforms-3/40af677edc9e981bf1ec9bb11c8b1d32/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+195                android:value="androidx.startup" />
+195-->[androidx.emoji2:emoji2:1.2.0] /home/userzakiayoube/.gradle/caches/transforms-3/40af677edc9e981bf1ec9bb11c8b1d32/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+196            <meta-data
+196-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/userzakiayoube/.gradle/caches/transforms-3/bdfc36cc96b3b5dbf1de77c609414b49/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+197                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+197-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/userzakiayoube/.gradle/caches/transforms-3/bdfc36cc96b3b5dbf1de77c609414b49/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+198                android:value="androidx.startup" />
+198-->[androidx.lifecycle:lifecycle-process:2.6.1] /home/userzakiayoube/.gradle/caches/transforms-3/bdfc36cc96b3b5dbf1de77c609414b49/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+199            <meta-data
+199-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+200                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+200-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+201                android:value="androidx.startup" />
+201-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+202        </provider>
+203
+204        <receiver
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+205            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+206            android:directBootAware="false"
+206-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+207            android:enabled="true"
+207-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+208            android:exported="true"
+208-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+209            android:permission="android.permission.DUMP" >
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+210            <intent-filter>
+210-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+211                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+212            </intent-filter>
+213            <intent-filter>
+213-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+214                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+215            </intent-filter>
+216            <intent-filter>
+216-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+217                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+218            </intent-filter>
+219            <intent-filter>
+219-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+220                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+220-->[androidx.profileinstaller:profileinstaller:1.3.0] /home/userzakiayoube/.gradle/caches/transforms-3/4dbbd11a74d28bd64c37893cccf57482/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+221            </intent-filter>
+222        </receiver>
+223    </application>
+224
+225</manifest>
